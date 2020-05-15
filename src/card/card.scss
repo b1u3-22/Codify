@@ -1,11 +1,33 @@
-Card {
-    width: 100px;
-    height: 200px;
+.Card {
+    width: 100%;
     position: relative;
     background: #232323;
     border: 5px solid #6672DF;
     box-sizing: border-box;
     border-radius: 27px;
-    margin: 3vh 25% 3vh 25%;
+    margin: 3vh 0% 3vh 0%;
     padding: 2vh 1vw 2vh 1vw;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0px 0px 60px rgba(0, 0, 0, 0.5);
+
+    p {
+        position: relative;
+        font-family: Montserrat;
+        font-style: normal;
+        font-weight: 300;
+        font-size: 25px;
+        text-align: center;
+        color: #FFFFFF;
+        padding-top: 3vh;
+    }
+
+    img {
+        position: relative;
+        max-width: 65%;
+        padding-top: 2vh;
+    }
 }
+

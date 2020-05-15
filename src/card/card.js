@@ -1,13 +1,16 @@
 import React from 'react';
-import './card.scss'
+import './Card.scss'
 
 class Card extends React.Component{
     render(){
-        return(
-            <Card>
-                <p>{this.props.text}</p>
-            </Card>
-        );
+        
+        if (this.props.imgloc === 'top')
+            return(
+                <div className = 'Card'>
+                    <img src = {this.props.imgsrc} alt = 'Icon for card element'></img>
+                    <p>{this.props.text}</p>
+                </div>
+            );
     }
 }
 
