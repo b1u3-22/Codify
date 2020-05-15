@@ -1,3 +1,7 @@
+a {
+    text-decoration: none;
+}
+
 .Button {
     position: relative;
     width: fit-content;
@@ -7,6 +11,7 @@
     border-radius: 22px;
     margin: 0%;
     margin-top: 15px;
+    margin-bottom: 15px;
 
     p {
         font-family: 'Montserrat', sans-serif;
@@ -17,5 +22,6 @@
         color: #000000;
         margin: 0%;
         padding: 1vh 1vw 1vh 1vw;
+        text-decoration: none;
     }
 }

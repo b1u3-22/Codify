@@ -4,9 +4,9 @@ import './Button.scss';
 class Button extends React.Component{
     render(){
         return(
-        <div className = "Button">
+        <a href = {this.props.dst}><div className = "Button">
             <p>{this.props.text}</p>
-        </div>
+        </div></a>
         );
     }
 }
