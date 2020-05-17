@@ -2,13 +2,19 @@ from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
 
 app = Flask(__name__)
-app.config["SQLALCHEMY_DATABASE_URI"] = "mysql://swaprojektkv9593:x8049s^9&ErUC2j2)9v.@sql4.webzdarma.cz:3306"
+app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///database.db"
 db = SQLAlchemy(app)
 
-class Profiles(db.Model):
-    __tablename__ = "Profiles"
-    first_name = db.Column("First Name", db.Unicode, primary_key = False)
-    last_name = db.Column("Last Name", db.Unicode, primary_key = False)
-    nickname = db.Column("Nickname", db.Unicode, primary_key = False)
-    email = db.Column("Email", db.Unicode, primary_key = True)
-    password = db.Column("Password", db.Unicode, primary_key = False)
+class Profile(db.Model):
+    first_name = db.Column("First Name", db.String(255))
+    last_name  = db.Column("Last Name", db.String(255))
+    nickname   = db.Column("Nickname", db.String(255), primary_key = True)
+    email      = db.Column("Email", db.String(255),  unique = True)
+    password   = db.Column("Password", db.String(255))
+
+    def __repr__(self):
+        return(self.first_name + "\n"
+             + self.last_name + "\n"
+             + self.nickname + "\n"
+             + self.email + "\n"
+             + self.password)
