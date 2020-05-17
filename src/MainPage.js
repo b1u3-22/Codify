@@ -32,7 +32,7 @@ function MainPage() {
           <Card text = "Find developer that suits you the best with his experience and price for your project or website." imgloc = 'top' imgsrc = {require('./resources/RentIcon.svg')}/>
         </Col>
         <Col lg = {3} sm = {10}>
-          <Card text = "Create your profile now and connect with other people in groups interested in the same thing as you." imgloc = 'top'imgsrc = {require('./resources/ProfileIcon.svg')} />
+          <Card text = "Create your profile now and connect with other people in groups interested in the same thing as you." imgloc = 'top' imgsrc = {require('./resources/ProfileIcon.svg')} />
         </Col>
       </Row>
       <Row>

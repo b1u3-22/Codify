@@ -1,11 +1,10 @@
 import React from 'react';
-import './Form.scss';
+import './SignupForm.scss';
 import Button from '../Button/Button'
 
-class Form extends React.Component{
+class SignupForm extends React.Component{
 
     render(){
-        if (this.props.type === "signup"){
             return (
                 <form>
                     <label for = "firstname">
@@ -54,11 +53,10 @@ class Form extends React.Component{
                             <Button text = "Log in instead" dst = "/LogIn" />
                         </div>
                     </div>
-
                 </form>
             );
-        }
+        
     }
 }
 
-export default Form;
+export default SignupForm;

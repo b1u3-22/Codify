@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.scss';
-import Form from './Form/Form'
+import SignupForm from './SignupForm/SignupForm'
 import { Container, Row, Col } from 'react-grid-system';
 
 function SignUp() {
@@ -14,11 +14,10 @@ function SignUp() {
       </Row>
       <Row className = "UpgradedRow">
         <Col className = "CentredColumn" lg = {4} sm = {10}>
-          <Form type = "signup"/>
+          <SignupForm />
         </Col>
       </Row>
     </Container>
-    
   );
 }
 
