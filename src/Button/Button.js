@@ -3,8 +3,9 @@ import './Button.scss';
 
 class Button extends React.Component{
     render(){
+
         return(
-        <a href = {this.props.dst}><div className = "Button">
+        <a href = {this.props.dst}><div className = "Button" onMouseOver = {this.onHover}>
             <p>{this.props.text}</p>
         </div></a>
         );

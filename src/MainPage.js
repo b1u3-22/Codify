@@ -1,8 +1,8 @@
 import React from 'react';
 import './App.scss';
-import Card from './Card/Card.js'
-import Button from './Button/Button.js'
-import Separator from './Separator/Separator.js'
+import Card from './Card/Card'
+import Button from './Button/Button'
+import Separator from './Separator/Separator'
 import { Container, Row, Col } from 'react-grid-system';
 
 function MainPage() {
