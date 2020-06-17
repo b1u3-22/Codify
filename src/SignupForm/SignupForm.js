@@ -37,16 +37,19 @@ class SignupForm extends React.Component{
                 }else{
                     this.setState({developer: true});
                 }
+                break;
 
             case "ATOS":
                 if (this.state.ATOS){
                     this.setState({ATOS: false});
                 }else{
                     this.setState({ATOS: true});
-                }  
+                }
+                break;
 
             default: 
                 console.log("Nothing changed")
+                break;
           }
       }
 
