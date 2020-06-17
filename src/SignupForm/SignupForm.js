@@ -67,6 +67,8 @@ class SignupForm extends React.Component{
                 ATOS:      this.state.ATOS
             })
         })
+
+        console.log(this.state.firstName + " " + this.state.LastName + " " + this.state.nickname + " " + this.state.email + " " + this.state.password + " " + this.state.developer + " " + this.state.ATOS)
     }
 
     render(){
