@@ -7,28 +7,20 @@ class LoginForm extends React.Component{
     constructor(props) {
         super(props);
         this.state = {loginStyle: {"border-color": "none"}, passwordStyle: {"border-color": "none"}, nickname: "", password: ""};
+        this.setNickname = this.setNickname.bind(this);
+        this.setPassword = this.setPassword.bind(this);
+        this.sendData = this.sendData.bind(this)
       }
 
-    inputHandlererNickname(e){
+    setNickname(e){
         this.setState({nickname: e.target.value});
     }
 
-    inputHandlererPassword(e){
+    setPassword(e){
         this.setState({password: e.target.value});
     }
 
-    sendData() {
-        fetch('https://b1u3-codify.herokuapp.com/LogInPost/', {
-            method: 'POST',
-            headers: {
-                'Accept': 'application/json',
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify({
-                nickname: this.state.nickname,
-                password: this.state.password
-            })
-        })
+    sendData(){
         console.log(this.state.nickname + " " + this.state.password)
     }
 
@@ -41,11 +33,11 @@ class LoginForm extends React.Component{
                         <label for = "nickname">
                             Nickname or email
                         </label>
-                        <input type = "text" id = "nickname" style = {this.state.loginStyle} onChange = {this.inputHandlererNickname} />
+                        <input type = "text" id = "nickname" style = {this.state.loginStyle} onChange = {this.setNickname} />
                         <label for = "password">
                             Password
                         </label>
-                        <input type = "password" id = "password" style = {this.state.passwordStyle} onChange = {this.inputHandlererPassword} />
+                        <input type = "password" id = "password" style = {this.state.passwordStyle} onChange = {this.setPassword} />
 
                     </form>
                 </div>
