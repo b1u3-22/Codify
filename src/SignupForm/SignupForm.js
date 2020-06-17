@@ -6,10 +6,10 @@ class SignupForm extends React.Component{
 
     constructor(props) {
         super(props);
-        this.state = {nicknameStyle: {"border-color": none}, emailStyle: {"border-color": none}, firstName: "", LastName: "", nickname: "", email: "", password: "", developer: false, ATOS: false}
+        this.state = {nicknameStyle: {"border-color": "none"}, emailStyle: {"border-color": "none"}, firstName: "", LastName: "", nickname: "", email: "", password: "", developer: false, ATOS: false}
       }
 
-    inputHandlerer(e, label){
+    inputHandlerer(label, e){
         switch(label){
             case "firstname":
                 this.setState({firstName: e.target.value});
@@ -77,36 +77,36 @@ class SignupForm extends React.Component{
                     <label for = "firstname">
                         First name
                     </label>
-                    <input type = "text" id = "firstname" onChange = {this.inputHandlerer(e, "firstname")} />
+                    <input type = "text" id = "firstname" onChange = {this.inputHandlerer("firstname")} />
 
                     <label for = "lastname">
                         Last name
                     </label>
-                    <input type = "text" id = "lastname" onChange = {this.inputHandlerer(e, "lastname")} />
+                    <input type = "text" id = "lastname" onChange = {this.inputHandlerer("lastname")} />
 
                     <label for = "nickname">
                         Nickname
                     </label>
-                    <input type = "text" id = "nickname" style = {this.state.nicknameStyle} onChange = {this.inputHandlerer(e, "nickname")} />
+                    <input type = "text" id = "nickname" style = {this.state.nicknameStyle} onChange = {this.inputHandlerer("nickname")} />
 
                     <label for = "email">
                         Email
                     </label>
-                    <input type = "email" id = "email" style = {this.state.emailStyle} onChange = {this.inputHandlerer(e, "email")} />
+                    <input type = "email" id = "email" style = {this.state.emailStyle} onChange = {this.inputHandlerer("email")} />
 
                     <label for = "password">
                         Password
                     </label>
-                    <input type = "password" id = "password" onChange = {this.inputHandlerer(e, "password")} />
+                    <input type = "password" id = "password" onChange = {this.inputHandlerer("password")} />
 
                     <div className = "checkbox-wrapper">
                         <label className = "checkbox-container">
-                            <input type = "checkbox"  onChange = {this.inputHandlerer(e, "developer")} />
+                            <input type = "checkbox"  onChange = {this.inputHandlerer("developer")} />
                             <div className = "checkmark" />
                             I'm developer
                         </label>
                         <label className = "checkbox-container">
-                            <input type = "checkbox" onChange = {this.inputHandlerer(e, "ATOS")} />
+                            <input type = "checkbox" onChange = {this.inputHandlerer("ATOS")} />
                             <div className = "checkmark" />
                             I accept the terms of service
                         </label>
