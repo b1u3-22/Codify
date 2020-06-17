@@ -1,5 +1,6 @@
 from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
+import json
 
 app = Flask(__name__)
 app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///database.db"
@@ -18,3 +19,9 @@ class Profile(db.Model):
              + self.nickname + "\n"
              + self.email + "\n"
              + self.password)
+
+
+@app.route("/SingUpPost", methods = ["POST"])
+def getDataSignUp():
+    data = request.form[]
+    return json.loads(data)[0]
