@@ -1,6 +1,6 @@
-from flask import Flask
+from flask import Flask, request
+from flask_cors import CORS, cross_origin
 from flask_sqlalchemy import SQLAlchemy
-import json
 
 app = Flask(__name__)
 app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///database.db"
@@ -21,7 +21,11 @@ class Profile(db.Model):
              + self.password)
 
 
-@app.route("/SingUpPost", methods = ["POST"])
+@app.route('/post/signup', methods = ["POST"])
+@cross_origin()
 def getDataSignUp():
-    data = request.form[]
-    return json.loads(data)[0]
+    print("smt")
+
+
+if __name__ == "__main__":
+    app.run()

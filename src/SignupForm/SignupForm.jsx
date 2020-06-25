@@ -1,4 +1,5 @@
 import React from 'react';
+import axios from 'axios';
 import './SignupForm.scss';
 import Button from '../Button/Button'
 
@@ -6,8 +7,8 @@ class SignupForm extends React.Component{
 
     constructor(props) {
         super(props);
-        this.state = {nicknameStyle: {"border-color": "none"},
-                      emailStyle: {"border-color": "none"},
+        this.state = {nicknameStyle: {"borderColor": "none"},
+                      emailStyle: {"borderColor": "none"},
                       firstName: "", 
                       lastName: "",
                       nickname: "", 
@@ -65,33 +66,38 @@ class SignupForm extends React.Component{
     
 
     sendData() {
-        console.log(this.state.firstName + " " + this.state.lastName + " " + this.state.nickname + " " + this.state.email + " " + this.state.password + " " + this.state.developer + " " + this.state.ATOS)
+        console.log(this.state.firstName + " " + this.state.lastName + " " + this.state.nickname + " " + this.state.email + " " + this.state.password + " " + this.state.developer + " " + this.state.ATOS);
+        // let data = {firstName: this.state.firstName, lastName: this.state.lastName, nickname: this.state.nickname, email: this.state.email, password: this.state.password, developer: this.state.developer, ATOS: this.state.ATOS};
+
+        axios.post('/post/signup', {boo: "foo"});
+
     }
+
 
     render(){
             return (
                 <form>
-                    <label for = "firstname">
+                    <label htmlFor = "firstname">
                         First name
                     </label>
                     <input type = "text" id = "firstname" value = {this.state.firstName} onChange = {this.setFirstName} />
 
-                    <label for = "lastname">
+                    <label htmlFor = "lastname">
                         Last name
                     </label>
                     <input type = "text" id = "lastname" value = {this.state.lastName} onChange = {this.setLastName} />
 
-                    <label for = "nickname">
+                    <label htmlFor = "nickname">
                         Nickname
                     </label>
                     <input type = "text" id = "nickname" style = {this.state.nicknameStyle} value = {this.state.nickname} onChange = {this.setNickname} />
 
-                    <label for = "email">
+                    <label htmlFor = "email">
                         Email
                     </label>
                     <input type = "email" id = "email" style = {this.state.emailStyle} value = {this.state.email} onChange = {this.setEmail} />
 
-                    <label for = "password">
+                    <label htmlFor = "password">
                         Password
                     </label>
                     <input type = "password" id = "password" value = {this.state.password} onChange = {this.setPassword} />

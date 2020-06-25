@@ -1,4 +1,5 @@
 import React from 'react';
+import axios from 'axios';
 import './LoginForm.scss';
 import Button from '../Button/Button'
 
@@ -22,6 +23,13 @@ class LoginForm extends React.Component{
 
     sendData(){
         console.log(this.state.nickname + " " + this.state.password)
+
+        let data = {nickname: this.state.nickname, password: this.state.password}
+
+        axios.post('/loginppost', data)
+             .then(response => {
+                console.log(response); console.log(response.data)
+        })
     }
 
     render(){
