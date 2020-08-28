@@ -30,6 +30,18 @@ class Post(db.Model):
 def index():
     return app.send_static_file('index.html')
 
+@app.route('/SignUp', methods = ["GET"])
+def index():
+    return app.send_static_file('index.html')
+
+@app.route('/find', methods = ["GET"])
+def index():
+    return app.send_static_file('index.html')
+
+@app.route('/profile<str:user>', methods = ["GET"])
+def index(user):
+    return app.send_static_file('index.html')
+
 @app.route('/SignUp', methods = ["POST"])
 def getDataSignUp():
 
