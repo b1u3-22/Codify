@@ -1,6 +1,7 @@
 from flask import Flask, request
 from datetime import datetime
 import json
+import os
 from flask_sqlalchemy import SQLAlchemy
 from sqlalchemy.sql.expression import bindparam
 
@@ -24,6 +25,10 @@ class Post(db.Model):
     text  = db.Column("text", db.Text())
     author = db.Column("author", db.String(255))
     time = db.Column("time", db.DateTime, default = datetime.now)
+
+@app.route('/', methods = ["GET"])
+def index():
+    return app.send_static_file('index.html')
 
 @app.route('/SignUp', methods = ["POST"])
 def getDataSignUp():
@@ -118,4 +123,5 @@ def returnAllPosts():
     return(output)
 
 if __name__ == "__main__":
-    app.run()
+    app.run(host = "0.0.0.0", 
+            port = os.environ.get('PORT', 80))
