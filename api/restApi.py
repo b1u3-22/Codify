@@ -31,7 +31,7 @@ def index():
     return app.send_static_file('index.html')
 
 @app.route('/SignUp', methods = ["GET"])
-def index():
+def SignUp():
     return app.send_static_file('index.html')
 
 @app.route('/find', methods = ["GET"])
