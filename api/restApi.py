@@ -5,7 +5,7 @@ import os
 from flask_sqlalchemy import SQLAlchemy
 from sqlalchemy.sql.expression import bindparam
 
-app = Flask(__name__)
+app = Flask(__name__, static_folder = './build', static_url_path = '/')
 app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///database.db"
 db = SQLAlchemy(app)
 
