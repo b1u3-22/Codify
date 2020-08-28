@@ -35,11 +35,11 @@ def SignUp():
     return app.send_static_file('index.html')
 
 @app.route('/find', methods = ["GET"])
-def index():
+def find():
     return app.send_static_file('index.html')
 
 @app.route('/profile<str:user>', methods = ["GET"])
-def index(user):
+def profile(user):
     return app.send_static_file('index.html')
 
 @app.route('/SignUp', methods = ["POST"])
