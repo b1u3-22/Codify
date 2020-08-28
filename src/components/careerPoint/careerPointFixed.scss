@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+.careerPointWrapper {
+    display: flex;
+    flex-direction: row;
+    max-width: 100%;
+    margin: 0 0 10vh 30px;
+
+    .icon {
+        height: 75px;
+        width: auto;
+        margin: 0;
+    }
+
+    .textWrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        width: 100%;
+
+        .careerTitle {
+            font-family: Montserrat;
+            font-style: normal;
+            font-weight: 300;
+            font-size: 40px;
+            color: #9CA5FE;
+            border: none;
+            margin: 0;
+
+        }
+
+        .careerTime {
+            font-family: Montserrat;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 24px;
+            color: #9CA5FE;
+            border: none;
+            margin: 0;
+        }
+
+        .careerDescription {
+            font-family: Montserrat;
+            font-style: normal;
+            font-weight: 300;
+            font-size: 25px;
+            color: #9CA6FD;
+            border: none;
+            margin: 0;
+        }
+    }
+}

@@ -1,0 +1,59 @@
+.postPointEditableWrapper {
+    background: #FFFFFF;
+    border: 4px solid #6672DF;
+    box-sizing: border-box;
+    border-radius: 25px;
+    justify-content: flex-start;
+    flex-direction: column;
+    padding: 40px 70px 40px 40px;
+    margin-top: 50px;
+
+    .postPointEditableTitle {
+        font-family: Montserrat;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 60px;
+        line-height: 73px;
+        color: #6672DF;
+        background-color: rgba($color: #000000, $alpha: 0);
+        border: none;
+
+        &::placeholder {
+            color: #6672DF;
+        }
+
+        &:focus {
+            outline: #6672DF;
+        }
+    }
+
+    .postPointEditableText {
+        font-family: Montserrat;
+        font-style: normal;
+        font-weight: 300;
+        font-size: 25px;
+        line-height: 30px;
+        color: #6672DF;
+        background-color: rgba($color: #000000, $alpha: 0);
+        border: none;
+        resize: none;
+        overflow: hidden;
+        margin-left: 30px;
+
+        &::placeholder {
+            color: #6672DF;
+        }
+
+        &:focus {
+            outline: #6672DF;
+        }
+    }
+
+    .postPointEditableButtonWrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: row;
+        margin-right: -30px;
+    }
+}

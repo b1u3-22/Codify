@@ -1,0 +1,78 @@
+.logInBackground {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    justify-content: center;
+    align-items: center;
+    background: rgba(102, 114, 223, 0.6);
+    backdrop-filter: blur(20px);
+    /* Note: backdrop-filter has minimal browser support */
+    z-index: 9999;
+    transition: all 500ms ease-in-out;
+
+    .logInWrapper {
+        width: 25%;
+        height: fit-content;
+        background: #6672DF;
+        border-radius: 44px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        padding-bottom: 20px;
+
+        .logInCircle {
+            width: 255px;
+            height: 255px;
+            background: #BABFF0;
+            border-radius: 50%;
+            margin: 60px;
+            margin-bottom: 30px;
+        }
+
+        .logInInput {
+            border: 5px solid #98A2F9;
+            box-sizing: border-box;
+            border-radius: 13px;
+            width: 95%;
+            font-family: Montserrat;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 40px;
+            line-height: 49px;
+            /* identical to box height */
+            color: #BABFF0;
+            background: rgba(0, 0, 0, 0);
+            text-align: center;
+            padding: 10px 0 10px 0;
+            margin: 30px;
+
+            &::placeholder {
+                color: #98A2F9;
+            }
+
+            &:focus {
+                outline: #98A2F9;
+            }
+        }
+
+        .logInTextLabel {
+            font-family: Montserrat;
+            font-style: normal;
+            font-weight: 200;
+            font-size: 30px;
+            line-height: 37px;
+            text-align: center;
+            color: #000000;
+            background: #DBFF00;
+            border-radius: 16px;
+            width: fit-content;
+            padding-right: 20px;
+            padding-left: 20px;
+            cursor: pointer;
+            margin: 10px;
+        }
+    }
+}

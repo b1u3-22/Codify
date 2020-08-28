@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+.UpgradedRow {
+    display: flex !important;
+    flex-direction: row !important;
+    //All of this just because they were too lazy to add 'justify-content-center' class that is even in Bootstrap. All it does is aligning that three cards to the center
+  }
+
+  .CentredColumn {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    flex-direction: row !important;
+  }
+
+  .RightedColumn {
+    display: inline-flex !important;
+    align-items: right !important;
+    justify-content: right !important;
+    flex-direction: row-reverse !important;
+  }
+
+  .LeftedColumn {
+    display: inline-flex !important;
+    align-items: left !important;
+    justify-content: left !important;
+    flex-direction: row !important;
+  }
+
+  .icon {
+    width: 90%;
+    height: auto;
+    margin-top: 20%;
+  }
+
+  .sectionTitle {
+    margin-top: 10%;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 200;
+    font-size: 90px;
+    color: #000000;
+  }
+
+  .sectionText {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 24px;
+    color: #000000;
+  }

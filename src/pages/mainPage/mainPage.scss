@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+.mainPage {
+    background-image: url('../../resources/background.png') !important;
+    overflow-x: hidden;
+
+    .landingPage {
+        height: 120vh;
+
+        .laptopAndServerIcon {
+            margin-left: 8%;
+            margin-top: 5%;
+            width: auto;
+            height: 65%;
+            z-index: 0;
+            position: absolute;
+        }
+
+        .mainTitle {
+            margin-left: 45%;
+            margin-top: 5%;
+            font-size: 120px;
+            position: absolute;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 200;
+            text-align: center;
+            color: #000000;
+        }
+
+        .codifyIcon {
+            margin-left: 55%;
+            margin-top: 12%;
+            z-index: 1;
+            position: absolute;
+        }
+
+        .longTextWrapper {
+            position: absolute;
+            display: flex;
+            flex-direction: row;
+            margin-left: 60%;
+            margin-top: 27%;
+            justify-content: center;
+            align-items: center;
+
+            .longText {
+                font-family: Montserrat;
+                font-style: normal;
+                font-weight: 200;
+                font-size: 60px;
+                text-align: center;
+                color: #000000;
+                margin-right: 5px;
+            }
+        }
+
+        .signupTextWrapper {
+            position: absolute;
+            display: flex;
+            flex-direction: row;
+            margin-left: 45%;
+            margin-top: 37%;
+            justify-content: center;
+            align-items: center;
+
+            a {
+                text-decoration: none;
+            }
+
+            .signUpText {
+                font-family: Montserrat;
+                font-style: normal;
+                font-weight: 200;
+                font-size: 40px;
+                text-align: center;
+                color: #000000;
+                margin-right: 5px;
+            }
+        }
+        
+    }
+}

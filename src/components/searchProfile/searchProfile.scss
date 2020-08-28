@@ -1,0 +1,74 @@
+.dest {
+    text-decoration: none;
+
+    .searchProfileWrapper {
+        display: flex;
+        flex-direction: row;
+        justify-items: flex-start;
+        align-items: center;
+        width: 100%;
+        margin-top: 35px;
+        margin-bottom: 15px;
+
+        .circle {
+            height: 160px;
+            width: 160px;
+            border-radius: 50%;
+            background: #6672DF;
+            margin-right: 30px;
+        }
+
+        .searchProfileTextWrapper {
+            display: flex;
+            flex-direction: column;
+            justify-items: flex-start;
+            max-width: 80%;
+
+            .name {
+                font-family: Montserrat;
+                font-style: normal;
+                font-weight: normal;
+                font-size: 40px;
+                line-height: 49px;
+                color: #6672DF;
+                margin: 0;
+                padding: 0;
+                margin-bottom: 10px;
+            }
+
+            .additionalTextWrapper {
+                display: flex;
+                flex-direction: row;
+                justify-items: flex-start;
+                align-items: center;
+                flex-wrap: wrap;
+
+                .characteristicsLabel {
+                    font-family: Montserrat;
+                    font-style: normal;
+                    font-weight: normal;
+                    font-size: 30px;
+                    line-height: 37px;
+                    color: #6672DF;
+                    margin: 0;
+                    padding: 0;
+                    margin-right: 15px;
+                    margin-bottom: 10px;
+                }
+
+                .primarySkillsLabel {
+                    font-family: Montserrat;
+                    font-style: normal;
+                    font-weight: normal;
+                    font-size: 15px;
+                    line-height: 18px;
+                    color: #9D9EA7;
+                    padding: 0;
+                    margin: 0;
+                    margin-right: 10px;
+
+                }
+            }
+        }
+    }
+}

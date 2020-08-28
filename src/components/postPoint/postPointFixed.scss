@@ -1,0 +1,70 @@
+.postPointFixedWrapper {
+    background: #FFFFFF;
+    border: 4px solid #6672DF;
+    box-sizing: border-box;
+    border-radius: 25px;
+    justify-content: flex-start;
+    flex-direction: column;
+    padding: 40px 70px 40px 40px;
+    margin-top: 50px;
+
+    .postPointFixedTitle {
+        font-family: Montserrat;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 60px;
+        line-height: 73px;
+        color: #6672DF;
+    }
+
+    .postPointFixedText {
+        font-family: Montserrat;
+        font-style: normal;
+        font-weight: 300;
+        font-size: 25px;
+        line-height: 30px;
+        color: #6672DF;
+        margin-left: 30px;
+    }
+
+    .postPointFixedAuthorWrapper {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        margin-top: 20px;
+        margin-right: -40px;
+
+        .postPointFixedCircle {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background: #6672DF;
+        }
+
+        .postPointFixedTextWrapper {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+
+            .postPointFixedAuthorName {
+                font-family: Montserrat;
+                font-style: normal;
+                font-weight: normal;
+                font-size: 40px;
+                line-height: 49px;
+                color: #6672DF;
+            }
+
+            .postPointFixedTime {
+                font-family: Montserrat;
+                font-style: normal;
+                font-weight: normal;
+                font-size: 15px;
+                line-height: 18px;
+                color: #9D9EA7;
+            }
+        }
+    }
+
+}
