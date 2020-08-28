@@ -38,7 +38,7 @@ def SignUp():
 def find():
     return app.send_static_file('index.html')
 
-@app.route('/profile<string:user>', methods = ["GET"])
+@app.route('/profile/<string:user>', methods = ["GET"])
 def profile(user):
     return app.send_static_file('index.html')
 
