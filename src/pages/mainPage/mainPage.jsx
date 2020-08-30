@@ -50,7 +50,7 @@ class mainPage extends React.Component {
             <LogIn logInStyle = {this.state.logInStyle} ref = {(logIn) => {this.logInRef = (logIn)}}/>
             <div className="landingPage">
                 <img className="laptopAndServerIcon" alt="Laptop and server icon" src={require("../../resources/landingPageIcon.svg")}></img>
-                <h1 className = "mainTitle">Welcome to</h1>
+                <h1 className = "mainTitle">Xelcome to</h1>
                 <img className="codifyIcon" alt="Laptop and server icon" src={require("../../resources/codifyIcon.svg")}></img>
                 <div className="longTextWrapper">
                     <h2 className="longText">A place to</h2>
