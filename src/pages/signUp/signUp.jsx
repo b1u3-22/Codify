@@ -67,6 +67,8 @@ class signUp extends React.Component {
     finishSignUp(response){
         if (response.data === "success"){
             window.location.href = "/profile/" + this.userName.state.text
+        }else{
+            alert(response.data)
         }
     }
 
