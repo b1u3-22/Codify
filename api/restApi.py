@@ -2,6 +2,7 @@ from flask import Flask, request
 from datetime import datetime
 import json
 import os
+import re 
 from flask_sqlalchemy import SQLAlchemy
 from sqlalchemy.sql.expression import bindparam
 
@@ -44,22 +45,54 @@ def profile(user):
 
 @app.route('/SignUp', methods = ["POST"])
 def getDataSignUp():
-
     data = request.json
-    newUser = Profile(name = data["name"], 
-                      email = data["mail"], 
-                      password = data["password"], 
-                      bioText = data["bioText"], 
-                      bioTitle = data["bioTitle"], 
-                      characteristics = data["characteristics"], 
-                      primarySkills = data["primarySkills"],
-                      secondarySkills = data["secondarySkills"],
-                      careers = data["careers"])
+    regex = '^[a-z0-9]+[\._]?[a-z0-9]+[@]\w+[.]\w{2,3}$'
 
-    db.session.add(newUser)
-    db.session.commit()
+    if data["name"] != "":
 
-    return("success")
+        if re.search(regex, data["mail"]):
+
+            if data["bioText"] != "" and data["bioTitle"] != "":
+
+                for value in data["characteristics"]:
+                    if value == "":
+                        return("Invalid Characteristic Point")
+
+                for value in data["primarySkills"]:
+                    if value == "":
+                        return("Invalid Primary Skill Point")
+
+                for value in data["secondarySkills"]:
+                    if value == "":
+                        return("Invalid Secondary Skill Point")
+
+                for value in data["careers"]:
+                    for value in value:
+                        if value == "":
+                            return("Invalid Career or School Info") 
+
+                newUser = Profile(name = data["name"], 
+                                email = data["mail"], 
+                                password = data["password"], 
+                                bioText = data["bioText"], 
+                                bioTitle = data["bioTitle"], 
+                                characteristics = data["characteristics"], 
+                                primarySkills = data["primarySkills"],
+                                secondarySkills = data["secondarySkills"],
+                                careers = data["careers"])
+
+                db.session.add(newUser)
+                db.session.commit()
+                return("success")
+
+            else: 
+                return("Invalid Bio Info")
+
+        else: 
+            return("Invalid Email")
+
+    else: 
+        return("Invalid Username")
 
 @app.route('/profile/post', methods = ["POST"])
 def sendProfile():
