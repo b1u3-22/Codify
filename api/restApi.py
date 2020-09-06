@@ -102,8 +102,6 @@ def sendProfile():
     output = {'name': queryOutput.name, 'bioText': queryOutput.bioText, 'bioTitle': queryOutput.bioTitle, 'characteristics': queryOutput.characteristics, 'primarySkills': queryOutput.primarySkills, 'secondarySkills': queryOutput.secondarySkills, 'careers': queryOutput.careers}
     outputFinal = json.dumps(output)
 
-    print(output)
-
     return(outputFinal)
 
 @app.route('/search', methods = ["POST"])
