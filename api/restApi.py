@@ -67,9 +67,8 @@ def getDataSignUp():
                         return("Invalid Secondary Skill Point")
 
                 for i in data["careers"]:
-                    for value in i:
-                        print(value)
-                        if value == "":
+                    for o in data["careers"][i]:
+                        if data["careers"][i][o] == "":
                             return("Invalid Career or School Info") 
 
                 newUser = Profile(name = data["name"], 
@@ -82,8 +81,8 @@ def getDataSignUp():
                                 secondarySkills = data["secondarySkills"],
                                 careers = data["careers"])
 
-                # db.session.add(newUser)
-                # db.session.commit()
+                db.session.add(newUser)
+                db.session.commit()
                 return("success")
 
             else: 
