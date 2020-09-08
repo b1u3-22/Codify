@@ -154,7 +154,7 @@ def returnAllPosts():
 
     queryOutput = Post.query.all()
 
-    for i in range(len(queryOutput) - 1, 0, -1):
+    for i in range(len(queryOutput)):
         output["post_" + str(i)] = {'title': queryOutput[i].title, 'text': queryOutput[i].text, 'author': queryOutput[i].author, 'time': str(str(queryOutput[i].time.hour) + ":" + 
                                                                                                                                              str(queryOutput[i].time.minute) + "  " + 
                                                                                                                                              str(queryOutput[i].time.day) + ". " + 
