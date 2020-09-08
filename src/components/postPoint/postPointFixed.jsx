@@ -15,13 +15,13 @@ class PostPointFixed extends React.Component {
             <div className="postPointFixedWrapper">
                 <div className="postPointFixedTitle">{this.props.title}</div>
                 <div className="postPointFixedText">{this.props.text}</div>
-                <div className="postPointFixedAuthorWrapper">
+                <a className = "dest" href = {"/profile/" + this.props.author}><div className="postPointFixedAuthorWrapper">
                     <div className="postPointFixedCircle" />
                     <div className="postPointFixedTextWrapper">
                         <div className="postPointFixedAuthorName">{this.props.author}</div>
                         <div className="postPointFixedTime">{this.props.time}</div>
                     </div>
-                </div>
+                </div></a>
             </div>
         )
     }

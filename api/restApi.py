@@ -54,21 +54,21 @@ def getDataSignUp():
 
             if data["bioText"] != "" and data["bioTitle"] != "":
 
-                for value in data["characteristics"]:
-                    if value == "":
+                for i in data["characteristics"]:
+                    if data["characteristics"][i] == "":
                         return("Invalid Characteristic Point")
 
-                for value in data["primarySkills"]:
-                    if value == "":
+                for i in data["primarySkills"]:
+                    if data["primarySkills"][i] == "":
                         return("Invalid Primary Skill Point")
 
-                for value in data["secondarySkills"]:
-                    if value == "":
+                for i in data["secondarySkills"]:
+                    if data["secondarySkills"][i] == "":
                         return("Invalid Secondary Skill Point")
 
-                for value in data["careers"]:
-                    for value in value:
-                        if value == "":
+                for i in data["careers"]:
+                    for o in data["careers"][i]:
+                        if data["careers"][i][o] == "":
                             return("Invalid Career or School Info") 
 
                 newUser = Profile(name = data["name"], 
@@ -101,8 +101,6 @@ def sendProfile():
     queryOutput = Profile.query.filter_by(name = data["name"]).first()
     output = {'name': queryOutput.name, 'bioText': queryOutput.bioText, 'bioTitle': queryOutput.bioTitle, 'characteristics': queryOutput.characteristics, 'primarySkills': queryOutput.primarySkills, 'secondarySkills': queryOutput.secondarySkills, 'careers': queryOutput.careers}
     outputFinal = json.dumps(output)
-
-    print(output)
 
     return(outputFinal)
 
@@ -169,4 +167,4 @@ def returnAllPosts():
 
 if __name__ == "__main__":
     app.run(host = "0.0.0.0", 
-            port = os.environ.get('PORT', 80))
+            port = os.environ.get('PORT', 40))
