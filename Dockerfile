@@ -14,4 +14,5 @@ WORKDIR /app
 COPY /api ./
 COPY --from=builder /app/build ./build
 RUN pip install gunicorn flask flask-sqlalchemy
+EXPOSE 40
 CMD ["gunicorn", "--bind", "0.0.0.0:40", "restApi:app"]
