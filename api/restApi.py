@@ -2,12 +2,12 @@ from flask import Flask, request
 from datetime import datetime
 import json
 import os
-import re 
+import re
 from flask_sqlalchemy import SQLAlchemy
 from sqlalchemy.sql.expression import bindparam
 
 app = Flask(__name__, static_folder = './build', static_url_path = '/')
-app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///database.db"
+app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///storage/database.db"
 db = SQLAlchemy(app)
 
 class Profile(db.Model):
