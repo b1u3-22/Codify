@@ -22,4 +22,3 @@ COPY api /api
 COPY entrypoint.sh /
 EXPOSE 5002
 CMD /entrypoint.sh
-# CMD ["serve", "-p", "5002", "-s", "."]doc
